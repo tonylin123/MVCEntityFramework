@@ -20,7 +20,7 @@ namespace MVCData.Models
        
         public int ID { get; set; }
 
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } 
 
         public List<Person> People { get; set; } = new List<Person>();
 

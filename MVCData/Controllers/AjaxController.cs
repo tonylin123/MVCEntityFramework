@@ -49,7 +49,8 @@ namespace MVCData.Controllers
         public IActionResult GetDetails(int id)
         {
             
-            Person person = Database.People.Include(x => x.City).FirstOrDefault(x => x.ID == id);
+            Person person = Database.People.Include(x => x.City).Include(x => x.Languages).
+                FirstOrDefault(x => x.ID == id);
 
             if (person == null)
             {

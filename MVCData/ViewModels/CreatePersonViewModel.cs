@@ -14,9 +14,12 @@ namespace MVCData.ViewModels
         public string Phone { get; set; } 
 
         [Required]
-        [Display(Name = "Enter your city")]
-        public string City { get; set; } 
-
+        [Display(Name = "Choose your city")]
+        public int City { get; set; } 
         public SelectList? SelectCity { get; set; }
+
+        [Display(Name = "Languages ")]
+        public int[]? Languages { get; set; }
+        public MultiSelectList? SelectLanguages { get; set; }
     }
 }

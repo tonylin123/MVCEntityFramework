@@ -13,7 +13,7 @@ namespace MVCData.Models
             return list.FindAll(person => ContainsKeyword(person, keyword));
         }
 
-
+       
         public static List<Person> GetPerson(List<Person> list, int id)
         {
             IEnumerable<Person> people = from person in list where person.ID == id select person;

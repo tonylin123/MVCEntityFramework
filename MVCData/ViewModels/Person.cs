@@ -14,13 +14,14 @@ namespace MVCData.ViewModels
 
         
 
-        public Person(string name, string phone, City city)
+        public Person(string name, string phone, City city, List<Language> languages)
         {
 
             Name = name;
             Phone = phone;
             City = city;
-            
+            Languages = languages;
+
         }
 
         [Key]

@@ -1,0 +1,31 @@
+﻿@using MVCData.Models;
+
+@functions
+{
+    public static string CapitalizeFirstLetter(string word)
+    {
+
+        string capitalizeFirst = word[0].ToString().ToUpper() + word.Substring(1);
+        return capitalizeFirst;
+    }
+
+    public static string GetLanguageString(Person person)
+    {
+
+        string languageString = "- - -";
+
+        if (person.Languages.Any())
+        {
+            List<string> languageNames = new List<string>();
+
+            foreach (Language language in person.Languages)
+            {
+                languageNames.Add(language.Name);
+            }
+
+            languageString = string.Join(", ", languageNames);
+        }
+
+        return languageString;
+    }
+}

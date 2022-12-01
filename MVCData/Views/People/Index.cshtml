@@ -44,6 +44,11 @@
             <select name="city" asp-for="CreatePerson.City" asp-items="@Model.CreatePerson.SelectCity" selected="@Model.CreatePerson.City"></select>
             <span asp-validation-for="CreatePerson.City"></span>
         </div>
+        <div class="field">
+            <label asp-for="CreatePerson.Languages" for="languages"></label>
+            <select name="languages" asp-for="CreatePerson.Languages" asp-items="@Model.CreatePerson.SelectLanguages"></select>
+            <span asp-validation-for="CreatePerson.Languages"></span>
+        </div>
 
         <input type="submit" name="submit" value="Create" class="submit">
     </fieldset>
@@ -57,6 +62,7 @@
             <th scope="col">Name</th>
             <th scope="col">Telephone</th>
             <th scope="col">City</th>
+            <th scope="col">Languages</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -67,6 +73,7 @@
                 <td>@person.Name</td>
                 <td>@person.Phone</td>
                 <td>@person.City.Name</td>
+                <td>@person.Languages</td>
                 <td><a class="delete" asp-controller="People" asp-action="DeletePerson" asp-route-name=@person.Name>Delete</a></td>
             </tr>
         }
@@ -77,6 +84,7 @@
     <div class="col">Name</div>
     <div class="col">Telephone</div>
     <div class="col">City</div>
+    <div class="col">Languages</div>
     <div class="col"></div>
 </div>
     @foreach (Person person in Model.People.List)
