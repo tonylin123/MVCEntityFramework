@@ -73,7 +73,7 @@
                 <td>@person.Name</td>
                 <td>@person.Phone</td>
                 <td>@person.City.Name</td>
-                <td>@person.Languages</td>
+                <td>@Views_Shared_Function.GetLanguageString(person)</td>
                 <td><a class="delete" asp-controller="People" asp-action="DeletePerson" asp-route-name=@person.Name>Delete</a></td>
             </tr>
         }
