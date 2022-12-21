@@ -54,7 +54,7 @@ namespace MVCData.Data
             modelbuilder.Entity<Person>().HasData(new { ID = 3, Name = "Captain America", Phone = "3213213", CityID = 2 });
             modelbuilder.Entity<Person>().HasData(new { ID = 4, Name = "KrallLexicon", Phone = "78998554", CityID = 3 });
 
-            //Mandarin
+            //Mandarin 
             modelbuilder.Entity<Person>()
                .HasMany(p => p.Languages)
                .WithMany(l => l.People)
