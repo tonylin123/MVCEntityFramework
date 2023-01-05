@@ -26,7 +26,7 @@ namespace MVCData.Controllers
             {
                 People = new PeopleViewModel()
                 {
-                    List = Database.People.Include(p => p.City).Include(p => p.Languages).ToList(),
+                    List = Database.People.Include(p => p.City.Country).Include(p => p.Languages).ToList(),
                 },
                 CreatePerson = new CreatePersonViewModel()
                 {

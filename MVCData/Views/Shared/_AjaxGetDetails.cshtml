@@ -19,6 +19,7 @@ else
             <div class="col fw-bold">Name</div>
             <div class="col fw-bold">Phone Number</div>
             <div class="col fw-bold">City</div>
+            <div class="col fw-bold">Country</div>
             <div class="col fw-bold">Language</div>
         </div>
         <div class="row">
@@ -26,6 +27,7 @@ else
             <div class="col"><span>@Model.Name</span></div>
             <div class="col"><span>@Model.Phone</span></div>
             <div class="col"><span>@Model.City.Name</span></div>
+            <div class="col"><span>@Model.City.Country.Name</span></div>
             <div class="col"><span>@Views_Shared_Function.GetLanguageString(Model)</span></div>
         </div>
     </div>

@@ -63,6 +63,7 @@
             <th scope="col">Telephone</th>
             <th scope="col">City</th>
             <th scope="col">Languages</th>
+            <th scope="col">Country</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -73,6 +74,7 @@
                 <td>@person.Name</td>
                 <td>@person.Phone</td>
                 <td>@person.City.Name</td>
+                <td>@person.City.Country.Name</td>
                 <td>@Views_Shared_Function.GetLanguageString(person)</td>
                 <td><a class="delete" asp-controller="People" asp-action="DeletePerson" asp-route-name=@person.Name>Delete</a></td>
             </tr>
@@ -84,6 +86,7 @@
     <div class="col">Name</div>
     <div class="col">Telephone</div>
     <div class="col">City</div>
+    <div class="col">Country</div>
     <div class="col">Languages</div>
     <div class="col"></div>
 </div>

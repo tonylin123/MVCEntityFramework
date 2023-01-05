@@ -4,6 +4,8 @@
     <div class="col">@Model.Name</div>
     <div class="col">@Model.Phone</div>
     <div class="col">@Model.City.Name</div>
+    <div class="col">@Model.City.Country.Name</div>
+
     <div class="col">@Views_Shared_Function.GetLanguageString(Model)</div>
     <div class="col"><a class="btn btn-danger" asp-controller="People" asp-action="DeletePerson" asp-route-name="@Model.Name" >Delete</a></div>
 </div>
